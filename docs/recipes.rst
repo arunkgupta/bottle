@@ -139,7 +139,7 @@ For Bottle, ``/example`` and ``/example/`` are two different routes [1]_. To tre
     @route('/test/')
     def test(): return 'Slash? no?'
 
-or add a WSGI middleware that strips trailing slashes from all URLs::
+add a WSGI middleware that strips trailing slashes from all URLs::
 
     class StripPathMiddleware(object):
       def __init__(self, app):
@@ -151,6 +151,12 @@ or add a WSGI middleware that strips trailing slashes from all URLs::
     app = bottle.app()
     myapp = StripPathMiddleware(app)
     bottle.run(app=myapp)
+
+or add a ``before_request`` hook to strip the trailing slashes::
+
+    @hook('before_request')
+    def strip_path():
+        request.environ['PATH_INFO'] = request.environ['PATH_INFO'].rstrip('/')
 
 .. rubric:: Footnotes
 
@@ -249,7 +255,7 @@ section of the `Getting Started with Python on Heroku/Cedar
 
     @route("/")
     def hello_world():
-            return "Hello World!"
+        return "Hello World!"
 
     run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 

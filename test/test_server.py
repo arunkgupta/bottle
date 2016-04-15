@@ -127,5 +127,5 @@ class MeinheldServer(TestServer):
 class TestBjoernServer(TestServer):
     server = 'bjoern'
 
-if __name__ == '__main__': #pragma: no cover
-    unittest.main()
+class TestAiohttpServer(TestServer):
+    server = 'aiohttp'

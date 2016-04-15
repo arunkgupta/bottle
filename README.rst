@@ -1,4 +1,5 @@
 .. image:: http://bottlepy.org/docs/dev/_static/logo_nav.png
+  :target: http://bottlepy.org/
   :alt: Bottle Logo
   :align: right
 
@@ -38,7 +39,7 @@ Bottle is a fast, simple and lightweight WSGI_ micro web-framework for Python_. 
 * **Routing:** Requests to function-call mapping with support for clean and  dynamic URLs.
 * **Templates:** Fast and pythonic `*built-in template engine* <http://bottlepy.org/docs/dev/tutorial.html#tutorial-templates>`_ and support for mako_, jinja2_ and cheetah_ templates.
 * **Utilities:** Convenient access to form data, file uploads, cookies, headers and other HTTP-related metadata.
-* **Server:** Built-in HTTP development server and support for paste_, fapws3_, bjoern_, `Google App Engine <http://code.google.com/intl/en-US/appengine/>`_, cherrypy_ or any other WSGI_ capable HTTP server.
+* **Server:** Built-in HTTP development server and support for paste_, fapws3_, bjoern_, `Google App Engine <https://cloud.google.com/appengine/>`_, cherrypy_ or any other WSGI_ capable HTTP server.
 
 Homepage and documentation: http://bottlepy.org
 
@@ -64,7 +65,7 @@ Download and Install
 
 .. __: https://github.com/bottlepy/bottle/raw/master/bottle.py
 
-Install the latest stable release with ``pip install bottle``, ``easy_install -U bottle`` or download `bottle.py`__ (unstable) into your project directory. There are no hard dependencies other than the Python standard library. Bottle runs with **Python 2.5+ and 3.x**.
+Install the latest stable release with ``pip install bottle``, ``easy_install -U bottle`` or download `bottle.py`__ (unstable) into your project directory. There are no hard dependencies other than the Python standard library. Bottle runs with **Python 2.6+ and 3.2+**.
 
 
 License
